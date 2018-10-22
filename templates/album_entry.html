@@ -1,0 +1,15 @@
+
+<form method="POST" action="http://localhost:5000/album_result">
+  <l2>{{form.album_name.label}}{{ form.album_name }}</l2>
+  <br>
+  <l2>{{form.likes.label}}</l2>
+  <br>
+  <ul>
+  {% for subfield in form.likes %}
+    <tr>
+        <li>{{ subfield }}{{ subfield.label }}</li>
+    </tr>
+  {% endfor %}
+  </ul>
+  {{ form.submit() }}
+</form>
